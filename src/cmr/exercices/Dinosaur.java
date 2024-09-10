@@ -17,12 +17,14 @@ public class Dinosaur {
     private int age;
     private int weight;
     private String species;
+    private DinosaursTypes dinosaursTypes = DinosaursTypes.UNKNOWN;
 
-    public Dinosaur(String name, int age, int weight, String species) {
+    public Dinosaur(String name, int age, int weight, String species, DinosaursTypes dinosaursTypes) {
         this.name = name;
         this.age = age;
         this.weight = weight;
         this.species = species;
+        this.dinosaursTypes = dinosaursTypes;
     }
     public String getName() {
         return name;
@@ -52,8 +54,17 @@ public class Dinosaur {
         this.species = species;
     }
 
+    public DinosaursTypes getDinosaursTypes() {
+        return dinosaursTypes;
+    }
+
+    public void setDinosaursTypes(DinosaursTypes dinosaursTypes) {
+        this.dinosaursTypes = dinosaursTypes;
+    }
+
     @Override
     public String toString() {
-        return "[" + getName() + ", " + getAge() + ", " + getWeight() + ", " + getSpecies() + "]";
+        return "[" + getName() + ", " + getAge() + ", "
+                + getWeight() + ", " + getSpecies() + ", " + getDinosaursTypes() +  "]";
     }
 }
