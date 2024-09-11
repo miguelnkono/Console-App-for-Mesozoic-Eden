@@ -1,0 +1,13 @@
+            Create a console application known as Mesozoic Eden Park Manager.
+
+
+The can be use to manager dinosaurs, park's employees and the tickets.
+
+Some of the key features are as follow :
+    * The ability to create, edit, remove dinosaur profiles park employees profiles and park tickets.
+    * A tracking system to monitor the location and the status of the dinosaur within the park.
+    * A robust tickets system to manage guest admission and ensure the park maintains optional capacity.
+    * The system should also handle special scenarios such as emergencies and VIP guest visits.
+
+
+Potential algorithm :

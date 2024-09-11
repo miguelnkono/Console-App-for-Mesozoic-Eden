@@ -28,16 +28,16 @@ enum Available {
 public class Park {
     private final String name;
     private ArrayList<Employee> employees = new ArrayList<>();
-    private ArrayList<Dinosaur> dinosaurs = new ArrayList<>();
+    private ArrayList<Enclosure> enclosures = new ArrayList<>();    // List of enclosures in the park.
     Available is_open = Available.OPEN;
 
     public Park (String name,
                  ArrayList<Employee> employees,
-                 ArrayList<Dinosaur> dinosaurs)
+                 ArrayList<Enclosure> enclosure)
     {
         this.name = name;
         this.employees = employees;
-        this.dinosaurs = dinosaurs;
+        this.enclosures = enclosure;
     }
 
     public void setIs_open(Available is_open) {
@@ -51,17 +51,17 @@ public class Park {
     }
 
     /* Methods for adding dinosaurs and removing them. */
-    public void Add(Dinosaur dinosaur) {
-        this.dinosaurs.add(dinosaur);
+    public void Add(Enclosure enclosure) {
+        this.enclosures.add(enclosure);
     }
-    public void Add(Dinosaur[] dinosaurs) {
-        for (Dinosaur dinosaur : dinosaurs) {
-            Add(dinosaur);
+    public void Add(Enclosure[] enclosures) {
+        for (Enclosure enclosure : enclosures) {
+            Add(enclosure);
         }
     }
-    public Dinosaur Remove() {  // To be checked later
+    /*public Dinosaur Remove() {  // To be checked later
         return this.dinosaurs.remove(1);
-    }
+    }*/
 
     // methods open close:
     public void Open() {
@@ -76,8 +76,17 @@ public class Park {
         ArrayList<Employee> temp = this.employees;
         return temp;
     }
-    public ArrayList<Dinosaur> getDinosaurs() {
+    /*public ArrayList<Dinosaur> getDinosaurs() {
         ArrayList<Dinosaur> temp = this.dinosaurs;
         return temp;
+    }*/
+    public ArrayList<String> getEnclosuresNames() {
+//        String names = enclosures.get(1).getName();
+        ArrayList<String> names = new ArrayList<>();
+        for (int i = 0; i < enclosures.toArray().length; i ++) {    // toArray().length
+            String name = enclosures.get(i).getName();
+            names.add(name);
+        }
+        return names;
     }
 }

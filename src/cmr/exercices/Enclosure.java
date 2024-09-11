@@ -5,6 +5,7 @@ package cmr.exercices;
 * Enclosure that contains dinosaurs inside.
 * @params :
 *   - array of dinosaurs
+*   - name
 *
 * @methods :
 *   - getters
@@ -12,9 +13,11 @@ package cmr.exercices;
 * */
 public class Enclosure {
     private Dinosaur[] dinosaur;
+    private String name;
 
-    public Enclosure(Dinosaur[] dinosaur) {
+    public Enclosure(String name, Dinosaur[] dinosaur) {
         this.dinosaur = dinosaur;
+        this.name = name;
     }
 
     // get the number of dinosaurs inside the enclosure.
@@ -25,5 +28,9 @@ public class Enclosure {
     public Dinosaur[] getDinosaur() {
         Dinosaur[] temp = dinosaur;
         return dinosaur;
+    }
+
+    public String getName() {
+        return name;
     }
 }

@@ -1,0 +1,5 @@
+package cmr.base;
+
+public enum Jobs {
+    ENCLOSURES_KEEPERS, SECURITY_STAFF, TICKET_SELLERS, TOUR_GUIDERS, WELCOMERS
+}
